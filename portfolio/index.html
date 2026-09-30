@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Портфолио</title>
+  <meta name="description" content="Кастом одежды, иллюстрации и скетчи">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#works">К работам</a>
+
+  <header class="cover" id="top">
+    <div class="cover__text">
+      <h1 class="masthead" id="masthead">&nbsp;</h1>
+      <p class="tagline" id="tagline"></p>
+      <nav class="cover__links" aria-label="Разделы">
+        <a href="#works">Работы</a>
+        <a href="#about">Обо мне</a>
+      </nav>
+    </div>
+    <button class="cover__story" id="coverStory" type="button" hidden>
+      <img id="coverImg" alt="">
+      <span class="cover__caption"><span id="coverCat" class="tape"></span><span id="coverTitle"></span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="works" id="works" aria-labelledby="worksTitle">
+      <h2 class="visually-hidden" id="worksTitle">Работы</h2>
+      <div class="filters" id="filters" role="tablist" aria-label="Категории"></div>
+      <div class="grid" id="grid" aria-live="polite"></div>
+      <p class="empty" id="empty" hidden></p>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="aboutTitle">
+      <img class="about__photo" id="avatar" alt="" hidden>
+      <div class="about__body">
+        <h2 id="aboutTitle">Обо мне</h2>
+        <div class="about__text" id="aboutText"></div>
+        <ul class="contacts" id="contacts"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span id="footerName"></span>
+    <a href="#top">Наверх</a>
+  </footer>
+
+  <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="vTitle" hidden>
+    <div class="viewer__stage">
+      <button class="viewer__nav viewer__nav--prev" id="vPrev" type="button" aria-label="Предыдущее фото">‹</button>
+      <img class="viewer__img" id="vImg" alt="">
+      <button class="viewer__nav viewer__nav--next" id="vNext" type="button" aria-label="Следующее фото">›</button>
+    </div>
+    <aside class="viewer__info">
+      <button class="viewer__close" id="vClose" type="button" aria-label="Закрыть">✕</button>
+      <span class="tape" id="vCat"></span>
+      <h2 id="vTitle"></h2>
+      <p class="viewer__meta" id="vMeta"></p>
+      <div class="viewer__desc" id="vDesc"></div>
+      <div class="viewer__thumbs" id="vThumbs"></div>
+      <div class="viewer__actions">
+        <button class="btn" id="vShare" type="button">Поделиться работой</button>
+        <div class="viewer__step">
+          <button class="btn btn--ghost" id="vPrevWork" type="button">Предыдущая</button>
+          <button class="btn btn--ghost" id="vNextWork" type="button">Следующая</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
