@@ -1,0 +1,88 @@
+# Настройки админки Pages CMS (https://app.pagescms.org)
+
+media:
+  input: images
+  output: /images
+
+content:
+  - name: works
+    label: Работы
+    type: file
+    path: content/works.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Название
+        type: string
+        required: true
+      - name: category
+        label: Категория
+        type: select
+        required: true
+        options:
+          # Чтобы добавить категорию, допишите её сюда
+          # и в поле «Категории» в разделе «Профиль».
+          values: [Кастом, Рисунки, Скетчи, Другое]
+      - name: cover
+        label: Главное фото
+        description: Показывается в сетке. Лучше до 2000 px по длинной стороне и до 1 МБ.
+        type: image
+        required: true
+      - name: gallery
+        label: Дополнительные фото
+        description: Детали, процесс, другие ракурсы. Видны при открытии работы.
+        type: image
+        options:
+          multiple:
+            max: 12
+      - name: description
+        label: Описание
+        type: text
+      - name: materials
+        label: Материалы
+        type: string
+      - name: date
+        label: Дата
+        type: date
+      - name: featured
+        label: Показать на обложке
+        description: Работа попадёт в шапку сайта. Если отмечено несколько — берётся первая по списку.
+        type: boolean
+
+  - name: site
+    label: Профиль
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: name
+        label: Имя или псевдоним
+        type: string
+        required: true
+      - name: tagline
+        label: Подзаголовок
+        type: string
+      - name: about
+        label: О себе
+        type: text
+      - name: avatar
+        label: Фото
+        type: image
+      - name: categories
+        label: Категории
+        description: Порядок вкладок на сайте.
+        type: string
+        list: true
+      - name: contacts
+        label: Контакты
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Название
+            type: string
+          - name: url
+            label: Ссылка
+            description: "Например https://t.me/username или mailto:почта@example.com"
+            type: string
