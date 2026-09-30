@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Джинсовка «Ночной сад»",
+    "category": "Кастом",
+    "date": "2026-08-14",
+    "cover": "/images/sample-1.jpg",
+    "gallery": [
+      "/images/sample-2.jpg"
+    ],
+    "description": "Роспись спинки и рукавов акриловыми красками по ткани. Пример текста: расскажите, для кого делали вещь и сколько заняла работа.",
+    "materials": "Акрил по ткани, джинсовая куртка",
+    "featured": true
+  },
+  {
+    "title": "Кеды «Волна»",
+    "category": "Кастом",
+    "date": "2026-07-02",
+    "cover": "/images/sample-3.jpg",
+    "gallery": [],
+    "description": "Пример работы. Замените фото и текст через админку.",
+    "materials": "Маркеры по коже, лак",
+    "featured": false
+  },
+  {
+    "title": "Портрет в синем",
+    "category": "Рисунки",
+    "date": "2026-06-20",
+    "cover": "/images/sample-4.jpg",
+    "gallery": [],
+    "description": "Пример работы. Замените фото и текст через админку.",
+    "materials": "Гуашь, бумага А3",
+    "featured": false
+  },
+  {
+    "title": "Городские наброски",
+    "category": "Скетчи",
+    "date": "2026-05-11",
+    "cover": "/images/sample-5.jpg",
+    "gallery": [
+      "/images/sample-8.jpg"
+    ],
+    "description": "Пример работы. Замените фото и текст через админку.",
+    "materials": "Линер, скетчбук",
+    "featured": false
+  },
+  {
+    "title": "Цветы и шум",
+    "category": "Рисунки",
+    "date": "2026-04-03",
+    "cover": "/images/sample-6.jpg",
+    "gallery": [],
+    "description": "Пример работы. Замените фото и текст через админку.",
+    "materials": "Цифровая иллюстрация",
+    "featured": false
+  },
+  {
+    "title": "Шоппер для кофейни",
+    "category": "Другое",
+    "date": "2026-03-18",
+    "cover": "/images/sample-7.jpg",
+    "gallery": [],
+    "description": "Пример работы. Замените фото и текст через админку.",
+    "materials": "Трафарет, краска по ткани",
+    "featured": false
+  }
+]
