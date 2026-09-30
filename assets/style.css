@@ -155,7 +155,26 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .card__title { font: 600 17px/1.25 var(--display); letter-spacing: -0.01em; }
 .card__cat { flex: none; font-size: 14px; color: var(--ink-soft); display: inline-flex; align-items: center; gap: 6px; }
 .card__cat::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); border: 1.5px solid var(--ink); }
-.card__more { font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+
+/* Стопка: у работы несколько фото */
+.card__frame { position: relative; display: block; }
+.card__img { position: relative; z-index: 2; }
+.card--stack { padding: 6px 10px 0 0; }
+.card__under {
+  position: absolute; inset: 0; z-index: 1;
+  background: var(--paper-2) center / cover no-repeat;
+  border: 2px solid var(--ink);
+  transition: transform .3s cubic-bezier(.2,.7,.3,1);
+}
+.card__under--1 { transform: translate(8px, -6px) rotate(2.5deg); }
+.card__under--2 { transform: translate(-6px, 4px) rotate(-2deg); z-index: 0; }
+.card--stack:hover .card__under--1, .card--stack:focus-visible .card__under--1 { transform: translate(18px, -10px) rotate(5deg); }
+.card--stack:hover .card__under--2, .card--stack:focus-visible .card__under--2 { transform: translate(-14px, 8px) rotate(-4.5deg); }
+.card__count {
+  --c: var(--sun);
+  position: absolute; z-index: 3; top: 12px; left: -6px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
 
 .empty { font-size: 19px; max-width: 40ch; }
 

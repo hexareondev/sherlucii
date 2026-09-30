@@ -150,13 +150,19 @@
     const list = visible();
     $("grid").innerHTML = list.map((w) => {
       const n = photosOf(w).length;
-      return `<button class="card" type="button" data-id="${esc(w.id)}" style="--c:${colorOf(w.category)}">
-        <img class="card__img" src="${esc(src(w.cover))}" alt="${esc(w.title)}" loading="lazy" decoding="async">
+      const photos = photosOf(w);
+      const under = photos.slice(1, 3).map((p, k) =>
+        `<span class="card__under card__under--${k + 1}" style="background-image:url('${esc(src(p))}')" aria-hidden="true"></span>`).join("");
+      return `<button class="card${n > 1 ? " card--stack" : ""}" type="button" data-id="${esc(w.id)}" style="--c:${colorOf(w.category)}">
+        <span class="card__frame">
+          ${under}
+          <img class="card__img" src="${esc(src(w.cover))}" alt="${esc(w.title)}${n > 1 ? `, ${n} фото` : ""}" loading="lazy" decoding="async">
+          ${n > 1 ? `<span class="card__count tape" aria-hidden="true">${n} фото</span>` : ""}
+        </span>
         <span class="card__meta">
           <span class="card__title">${esc(w.title)}</span>
           <span class="card__cat">${esc(w.category || "")}</span>
         </span>
-        ${n > 1 ? `<span class="card__more">${n} фото</span>` : ""}
       </button>`;
     }).join("");
     const empty = $("empty");
