@@ -12,12 +12,15 @@
     "featured": true
   },
   {
-    "title": "Кеды «Волна»",
-    "category": "Кастом",
-    "cover": "/images/sample-3.jpg",
-    "description": "Пример работы. Замените фото и текст через админку.",
+    "title": "Портрет Эш",
+    "category": "Рисунки",
+    "cover": "/images/photo_2026-05-31_22-09-35.jpg",
+    "gallery": [
+      "/images/photo_2026-10-01_01-55-43.jpg"
+    ],
+    "description": "С днём рождения мега крутую Эш",
     "materials": "Маркеры по коже, лак",
-    "date": "2026-07-02",
+    "date": "2026-05-31",
     "featured": false
   },
   {
