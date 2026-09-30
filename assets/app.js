@@ -93,7 +93,17 @@
     const s = state.site;
     const name = s.name || "Портфолио";
     document.title = name + " — портфолио";
-    $("masthead").innerHTML = name.split(/\s+/).map((w) => `<span>${esc(w)}</span>`).join("");
+    const words = name.trim().split(/\s+/);
+    const h = $("masthead");
+    h.classList.toggle("masthead--single", words.length === 1);
+    if (words.length === 1 && [...words[0]].length >= 3) {
+      // Один ник: делим на две цветные части по середине
+      const chars = [...words[0]];
+      const cut = Math.ceil(chars.length / 2);
+      h.innerHTML = `<span><span class="m-a">${esc(chars.slice(0, cut).join(""))}</span><span class="m-b">${esc(chars.slice(cut).join(""))}</span></span>`;
+    } else {
+      h.innerHTML = words.map((w) => `<span>${esc(w)}</span>`).join("");
+    }
     $("tagline").textContent = s.tagline || "";
     fitMasthead();
     if (document.fonts) document.fonts.ready.then(fitMasthead);
