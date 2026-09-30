@@ -1,12 +1,22 @@
 {
-  "name": "Имя Художника",
-  "tagline": "Кастом одежды, иллюстрации и скетчи. Беру заказы на роспись курток, кед и джинсы.",
+  "name": "Sherlucii",
+  "tagline": "Кастом одежды, иллюстрации и скетчи. Беру заказы на роспись одежды.",
   "about": "Здесь короткий рассказ о себе: чем занимаетесь, с какими материалами работаете, где учились и что вдохновляет. Два-три абзаца достаточно.\n\nМожно добавить, как заказать работу: сроки, примерная стоимость, куда писать.",
-  "avatar": "/images/avatar.jpg",
-  "categories": ["Кастом", "Рисунки", "Скетчи", "Другое"],
+  "avatar": "/images/photo_2024-11-05_00-53-21.jpg",
+  "categories": [
+    "Кастом",
+    "Рисунки",
+    "Скетчи",
+    "Другое"
+  ],
   "contacts": [
-    { "label": "Telegram", "url": "https://t.me/username" },
-    { "label": "Instagram", "url": "https://instagram.com/username" },
-    { "label": "Почта", "url": "mailto:hello@example.com" }
+    {
+      "label": "Telegram",
+      "url": "https://t.me/sherlucii"
+    },
+    {
+      "label": "TikTok",
+      "url": "https://www.tiktok.com/@shinlucc"
+    }
   ]
 }
