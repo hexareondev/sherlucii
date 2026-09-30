@@ -42,5 +42,15 @@
     "description": "Визитки сделала моим любимкам",
     "date": "2026-10-01",
     "featured": false
+  },
+  {
+    "title": "Портрет Кореш",
+    "category": "Рисунки",
+    "cover": "/images/Арты/Кореш.jpg",
+    "gallery": [
+      "/images/Арты/Кореш_2.jpg"
+    ],
+    "date": "2026-07-19",
+    "featured": false
   }
 ]
